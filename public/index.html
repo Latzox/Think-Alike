@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Game Room Example</title>
+</head>
+
+<body>
+  <div>
+    <div id="word-guess-container">
+      <form id="word-guess-form">
+        <input type="text" id="word-guess-input" placeholder="Enter your word here" required />
+        <button type="submit">Submit</button>
+      </form>
+      
+      <table id="words-table">
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Word</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Words will be added here dynamically -->
+        </tbody>
+      </table>
+    </div>
+    <input type="text" id="roomInput" placeholder="Room ID">
+    <input type="text" id="nameInput" placeholder="Your Name">
+    <button id="joinButton">Join Room</button>
+    <button id="leaveButton">Leave Room</button>
+    <div id="roomStatus"></div>
+  </div>
+  
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

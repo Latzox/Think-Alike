@@ -1,0 +1,15 @@
+{
+  "name": "think-alike",
+  "version": "1.0.0",
+  "description": "A simple word guessing game for two players",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marco Platzer",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.3",
+    "socket.io": "^4.7.4"
+  }
+}

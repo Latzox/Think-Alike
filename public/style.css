@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  div {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+  }
+  
+  button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button#leaveButton {
+    background-color: #dc3545;
+    display: none;
+    margin-top: 20px;
+  }
+  
+  button#leaveButton:hover {
+    background-color: #c82333;
+  }
+  
+  #roomStatus {
+    display: none; /* Initially hidden */
+    margin-top: 20px; /* Ensures alignment is managed by the container */
+    text-align: center; /* Centers the text within the div */
+  }
+
+  #word-guess-container {
+    display: none;
+  }
+  
+  #words-table {
+    width: 60%; /* Adjust the width as needed */
+    margin: 20px auto; /* Centers the table and adds space around it */
+    border-collapse: collapse; /* Collapses the border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+    border-radius: 5px; /* Rounds the corners */
+    overflow: hidden; /* Ensures the rounded corners apply to the inner table cells */
+  }
+  
+  #words-table th, 
+  #words-table td {
+    border: 1px solid #ddd; /* Light grey border */
+    padding: 8px; /* Spacing inside cells */
+    text-align: center; /* Center text */
+  }
+  
+  #words-table th {
+    background-color: #f2f2f2; /* Light grey background */
+    color: #333; /* Dark grey text */
+  }
+  
+  #words-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra-striping for rows */
+  }
+  
+  #words-table tr:hover {
+    background-color: #f1f1f1; /* Hover effect for rows */
+  }
