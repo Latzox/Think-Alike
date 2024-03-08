@@ -30,6 +30,7 @@ jobs:
           file: Dockerfile
   Deploy:
     name: 'Deploy to Azure'
+    needs: Build
     runs-on: ubuntu-latest
     environment: staging
     steps:
@@ -46,7 +47,7 @@ jobs:
       with:
         azcliversion: 2.49.0
         inlineScript: |
-          az group create --resource-group ${{ vars.AZURE_STAGING_RG }} --location europewest
+          az group create --resource-group ${{ vars.AZURE_STAGING_RG }} --location westeurope
   
     - name: Azure Bicep Deploy
       uses: Azure/arm-deploy@v2
