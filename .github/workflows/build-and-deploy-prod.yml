@@ -30,9 +30,44 @@ jobs:
           push: true
           tags: ${{ vars.ACR_URL }}/${{ vars.DOCKER_IMAGE_NAME }}:latest
           file: Dockerfile
-  Deploy:
-    name: 'Deploy to Azure'
+  Deploy-WhatIf:
+    name: 'Deploy to Azure (What-If)'
     needs: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Create Resource Group
+      uses: azure/CLI@v1.0.9
+      with:
+        azcliversion: 2.49.0
+        inlineScript: |
+          az group create --resource-group ${{ vars.AZURE_PROD_RG }} --location switzerlandnorth
+  
+    - name: Azure Bicep Deploy
+      uses: Azure/arm-deploy@v2
+      with:
+        subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
+        resourceGroupName: ${{ vars.AZURE_PROD_RG }}
+        template: ./deploy/main.bicep
+        parameters: '
+          dockerImageName=${{ vars.DOCKER_IMAGE_NAME }}
+          dockerImageTag=latest
+          appServiceName=${{ vars.DOCKER_IMAGE_NAME }}-prod
+          containerRegistry=${{ vars.ACR_URL }}
+          environment=prod'
+        additionalArguments: "--what-if"
+        failOnStdErr: false
+
+  Deploy-Prod:
+    name: 'Deploy to Azure'
+    needs: Deploy-WhatIf
     runs-on: ubuntu-latest
     environment: production
     steps:
