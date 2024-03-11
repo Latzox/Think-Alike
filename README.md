@@ -1,7 +1,7 @@
 |Environment|Build & Deploy|Demo|
 |:----------|:-------------|:---|
 | Staging   | [![Build and Deploy (Staging)](https://github.com/Latzox/Think-Alike/actions/workflows/build-and-deploy-staging.yml/badge.svg)](https://github.com/Latzox/Think-Alike/actions/workflows/build-and-deploy-staging.yml) | [Staging on Azure](https://thinkalike-staging-app.azurewebsites.net/) |
-| Prod | [![Build and Deploy (Staging)](https://github.com/Latzox/Think-Alike/actions/workflows/build-and-deploy-prod.yml/badge.svg)](https://github.com/Latzox/Think-Alike/actions/workflows/build-and-deploy-prod.yml) | [Prod on Azure](https://thinkalike-prod-app.azurewebsites.net/)|
+| Prod | [![Build and Deploy (Prod)](https://github.com/Latzox/Think-Alike/actions/workflows/build-and-deploy-prod.yml/badge.svg)](https://github.com/Latzox/Think-Alike/actions/workflows/build-and-deploy-prod.yml) | [Prod on Azure](https://thinkalike-prod-app.azurewebsites.net/)|
 
 # Think Alike
 
