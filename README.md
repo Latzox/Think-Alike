@@ -1,3 +1,8 @@
+|Environment|Build & Deploy|Demo|
+|:----------|:-------------|:---|
+| Staging   | [![Build and Deploy (Staging)](https://github.com/Latzox/Think-Alike/actions/workflows/build-and-deploy-staging.yml/badge.svg)](https://github.com/Latzox/Think-Alike/actions/workflows/build-and-deploy-staging.yml) | [Staging on Azure](https://thinkalike-staging-app.azurewebsites.net/) |
+| Prod | [![Build and Deploy (Staging)](https://github.com/Latzox/Think-Alike/actions/workflows/build-and-deploy-prod.yml/badge.svg)](https://github.com/Latzox/Think-Alike/actions/workflows/build-and-deploy-prod.yml) | [Prod on Azure](https://thinkalike-prod-app.azurewebsites.net/)|
+
 # Think Alike
 
 Think Alike is a nodejs web application. The game offers an exciting twist to classic word games. Designed for multiplayer interactions, it features real-time gameplay where players enter a virtual room, challenge each other by guessing words, and see results dynamically as the game unfolds. Its architecture is built on efficient client-server communication, ensuring a seamless and responsive user experience. Utilizing web sockets for instantaneous data transfer, it allows players to see updates without any delay, making every round thrilling and competitive.
@@ -57,8 +62,6 @@ Access the application at: http://localhost:80
 
 ## Contributing
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-Please refer to the CONTRIBUTING.md for more information.
 
 ## Versioning
 We use SemVer for versioning. For the versions available, see the tags on this repository.
