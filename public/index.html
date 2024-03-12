@@ -4,7 +4,8 @@
 <head>
   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
-  <title>Game Room Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Think Alike</title>
 </head>
 
 <body>
@@ -14,7 +15,7 @@
         <input type="text" id="word-guess-input" placeholder="Enter your word here" required />
         <button type="submit">Submit</button>
       </form>
-      
+
       <table id="words-table">
         <thead>
           <tr>
@@ -27,13 +28,13 @@
         </tbody>
       </table>
     </div>
-    <input type="text" id="roomInput" placeholder="Room ID">
-    <input type="text" id="nameInput" placeholder="Your Name">
-    <button id="joinButton">Join Room</button>
-    <button id="leaveButton">Leave Room</button>
+      <input type="text" id="roomInput" placeholder="Room ID">
+      <input type="text" id="nameInput" placeholder="Your Name">
+      <button id="joinButton">Join Room</button>
+      <button id="leaveButton">Leave Room</button>
     <div id="roomStatus"></div>
   </div>
-  
+
   <script src="/socket.io/socket.io.js"></script>
   <script src="script.js"></script>
 </body>
