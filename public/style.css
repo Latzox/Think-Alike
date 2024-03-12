@@ -1,12 +1,12 @@
 @media screen and (max-width: 768px) {
   body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden; 
     flex-direction: column;
     justify-content: flex-start;
   }
   
   input[type="text"], #words-table {
-    width: 90%; /* Adjust width to fit smaller screens */
+    width: 90%; 
   }
 }
 
@@ -69,9 +69,9 @@
   }
   
   #roomStatus {
-    display: none; /* Initially hidden */
-    margin-top: 20px; /* Ensures alignment is managed by the container */
-    text-align: center; /* Centers the text within the div */
+    display: none;
+    margin-top: 20px; 
+    text-align: center; 
   }
 
   #word-guess-container {
@@ -79,47 +79,47 @@
   }
   
   #word-guess-form {
-    display: flex; /* Use flexbox for the form */
-    gap: 10px; /* Optional: adds some space between the input and the button */
-    flex-wrap: nowrap; /* Prevents wrapping, keeping elements in a single row */
+    display: flex; 
+    gap: 10px; 
+    flex-wrap: nowrap; 
   }
   
   #word-guess-input {
-    flex-grow: 1; /* Allows the input to grow and fill the available space */
-    flex-shrink: 1; /* Allows the input to shrink if necessary */
-    min-width: 0; /* Prevents the input from forcing the container to expand */
+    flex-grow: 1; 
+    flex-shrink: 1; 
+    min-width: 0; 
   }
   
   button[type="submit"] {
-    flex-grow: 0; /* Prevents the button from growing */
-    white-space: nowrap; /* Keeps the button text in a single line */
+    flex-grow: 0; 
+    white-space: nowrap; 
   }
 
   #words-table {
-    width: 60%; /* Adjust the width as needed */
-    margin: 20px auto; /* Centers the table and adds space around it */
-    border-collapse: collapse; /* Collapses the border */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
-    border-radius: 5px; /* Rounds the corners */
-    overflow: hidden; /* Ensures the rounded corners apply to the inner table cells */
+    width: 60%; 
+    margin: 20px auto; 
+    border-collapse: collapse; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 5px; 
+    overflow: hidden; 
   }
   
   #words-table th, 
   #words-table td {
-    border: 1px solid #ddd; /* Light grey border */
-    padding: 8px; /* Spacing inside cells */
-    text-align: center; /* Center text */
+    border: 1px solid #ddd; 
+    padding: 8px; 
+    text-align: center; 
   }
   
   #words-table th {
-    background-color: #f2f2f2; /* Light grey background */
-    color: #333; /* Dark grey text */
+    background-color: #f2f2f2;
+    color: #333;
   }
   
   #words-table tr:nth-child(even) {
-    background-color: #f9f9f9; /* Zebra-striping for rows */
+    background-color: #f9f9f9; 
   }
   
   #words-table tr:hover {
-    background-color: #f1f1f1; /* Hover effect for rows */
+    background-color: #f1f1f1; 
   }
